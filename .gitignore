@@ -1,16 +1,20 @@
-# Compiled class file
-*.class
+# === Build and Helper Files ===
+HELP.md
+target/
+build/
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Log file
+# === Maven Wrapper ===
+.mvn/wrapper/maven-wrapper.jar
+
+# === Compiled Files and Logs ===
+*.class
 *.log
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
+# === Package and Archive Files ===
 *.jar
 *.war
 *.nar
@@ -19,6 +23,38 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# === JVM Logs and Crash Reports ===
 hs_err_pid*
 replay_pid*
+
+# === IDE: IntelliJ IDEA ===
+.idea
+*.iws
+*.iml
+*.ipr
+
+# === IDE: Spring Tool Suite (STS) ===
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# === IDE: NetBeans ===
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# === IDE: Visual Studio Code ===
+.vscode/
+
+# === Other Tools and Environments ===
+# BlueJ
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
