@@ -1,13 +1,13 @@
-# LightPollutionService
+# java-microservice-starter
 
-![Build](https://github.com/Aldhafara/LightPollutionService/actions/workflows/ci.yml/badge.svg)
+![Build](https://github.com/Aldhafara/java-microservice-starter/actions/workflows/ci.yml/badge.svg)
 
-![License](https://img.shields.io/github/license/Aldhafara/LightPollutionService)
+![License](https://img.shields.io/github/license/Aldhafara/java-microservice-starter)
 
-![Last Commit](https://img.shields.io/github/last-commit/Aldhafara/LightPollutionService)
+![Last Commit](https://img.shields.io/github/last-commit/Aldhafara/java-microservice-starter)
 
-LightPollutionService provides real-time sky darkness ratings and light pollution data for any location, empowering
-astrophotographers to find the best stargazing spots.
+java-microservice-starter is Java/Spring Boot Microservice Skeleton
+Reusable starter for building production-ready Java/Spring Boot microservices.
 
 ## Table of Contents
 
@@ -24,7 +24,6 @@ astrophotographers to find the best stargazing spots.
 - [Example Usage](#example-usage)
 - [How to Test](#how-to-test)
 - [License](#license)
-- [Data Source](#data-source)
 - [TODO / Roadmap](#todo--roadmap)
 
 ## Features
@@ -38,7 +37,7 @@ Currently under development. Available now:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Aldhafara/LightPollutionService.git
+git clone https://github.com/Aldhafara/java-microservice-starter.git
 ```
 
 2. Start the application:
@@ -64,13 +63,13 @@ http://localhost:8080
 2. Build the image:
 
 ```bash
-docker build -t lightpollutionservice .
+docker build -t javamicroservicestarter .
 ```
 
 3. Run:
 
 ```bash
-docker run -p 8080:8080 lightpollutionservice
+docker run -p 8080:8080 javamicroservicestarter
 ```
 
 4. (or, with Docker Compose)
@@ -101,25 +100,15 @@ _Planned: As new endpoints are implemented, they will be automatically documente
 | Endpoint  | Type | Description                                 | Status |
 |-----------|------|---------------------------------------------|--------|
 | /status   | GET  | Server status, uptime, timestamp            | ✅      |
-| /darkness | GET  | Sky brightness rating for given coordinates | ❌      |
 
 ## API Request Parameters
 
 Planned features. Not yet implemented
 
-| Parameter | Type  | Description        | Default            |
-|-----------|-------|--------------------|--------------------|
-| latitude  | float | Location latitude  | 52.232222 (Warsaw) |
-| longitude | float | Location longitude | 21.008333 (Warsaw) |
-
-- **All parameters are optional.** If not provided, Warsaw is used.
-
 **Example requests:**
 
 ```
 GET /status
-GET /darkness
-GET /darkness?latitude=50.06143&longitude=19.93658
 ```
 
 ## API Response Format
@@ -142,25 +131,6 @@ GET /darkness?latitude=50.06143&longitude=19.93658
 - `uptimePretty` - server uptime in easy to read form
 - `timestamp` - timestamp of request
 
-### Example `/darkness` Response
-
-Planned features. Not yet implemented.
-
-```json
-{
-  "latitude": 52.232222,
-  "longitude": 21.008333,
-  "radiance": 0.12,
-  "darknessScore": "dark"
-}
-```
-
-**Description of key fields:**
-
-- `latitude`, `longitude` - query coordinates
-- `radiance` - light intensity (lower = darker)
-- `darknessScore` - sky darkness rating (e.g., "dark", "average", "bright")
-
 ## Caching
 
 - Lookup results are cached (planned: per location for 1 hour).
@@ -168,7 +138,7 @@ Planned features. Not yet implemented.
 
 ## Rate Limiting
 
-- Planned: endpoint protection (e.g., /darkness)—limit 20 requests/min/IP.
+- Planned: endpoint protection (e.g., /template-endpoint)—limit 20 requests/min/IP.
 - Exceeding the limit: HTTP 429.
 
 ## Error Handling
@@ -191,7 +161,7 @@ Planned features. Not yet implemented.
 Planned features. Not yet implemented.
 
 ```bash
-curl "http://localhost:8080/darkness?latitude=50.06143&longitude=19.93658"
+curl "http://localhost:8080/template-endpoint"
 ```
 
 ## How to Test
@@ -206,21 +176,9 @@ Run tests:
 
 MIT
 
-## Data Source
-
-This product was made utilizing VIIRS Nighttime Lights data produced by the Earth Observation Group, Payne Institute for
-Public Policy, Colorado School of Mines.
-
-### Data:
-
-[EOG VIIRS Nighttime Lights - annual composites](https://eogdata.mines.edu/products/vnl/#annual_v2)
-
-License: Creative Commons Attribution 4.0 (CC-BY 4.0)
-
 ## TODO / Roadmap
 
-- [ ] /darkness?lat=...&lon=... endpoint
-- [ ] GeoTIFF value lookup
+- [ ] /template-endpoint
 - [ ] Result caching
 - [ ] Input parameter validation
 - [X] Global error handler

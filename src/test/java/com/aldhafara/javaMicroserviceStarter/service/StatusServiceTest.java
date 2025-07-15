@@ -1,4 +1,4 @@
-package com.aldhafara.lightPollutionService.service;
+package com.aldhafara.javaMicroserviceStarter.service;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package com.aldhafara.lightPollutionService.exception;
+package com.aldhafara.javaMicroserviceStarter.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

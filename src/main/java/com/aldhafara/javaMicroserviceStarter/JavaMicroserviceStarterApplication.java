@@ -1,13 +1,13 @@
-package com.aldhafara.lightPollutionService;
+package com.aldhafara.javaMicroserviceStarter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LightPollutionServiceApplication {
+public class JavaMicroserviceStarterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LightPollutionServiceApplication.class, args);
+		SpringApplication.run(JavaMicroserviceStarterApplication.class, args);
 	}
 
 }

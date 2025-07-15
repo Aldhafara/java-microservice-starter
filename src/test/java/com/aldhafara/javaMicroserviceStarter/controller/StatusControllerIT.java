@@ -1,6 +1,6 @@
-package com.aldhafara.lightPollutionService.controller;
+package com.aldhafara.javaMicroserviceStarter.controller;
 
-import com.aldhafara.lightPollutionService.service.StatusService;
+import com.aldhafara.javaMicroserviceStarter.service.StatusService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;

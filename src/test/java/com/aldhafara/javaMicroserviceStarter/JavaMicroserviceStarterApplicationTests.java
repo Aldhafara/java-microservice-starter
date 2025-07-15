@@ -1,10 +1,10 @@
-package com.aldhafara.lightPollutionService;
+package com.aldhafara.javaMicroserviceStarter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LightPollutionServiceApplicationTests {
+class JavaMicroserviceStarterApplicationTests {
 
 	@Test
 	void contextLoads() {

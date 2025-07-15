@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.aldhafara</groupId>
-	<artifactId>lightPollutionService</artifactId>
+	<artifactId>javaMicroserviceStarter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>LightPollutionService</name>
+	<name>java-microservice-starter</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
