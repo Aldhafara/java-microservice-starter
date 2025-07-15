@@ -13,6 +13,7 @@ astrophotographers to find the best stargazing spots.
 
 - [Features](#features)
 - [How to Run](#how-to-run)
+- [How to Run with Docker](#how-to-run-with-docker)
 - [API Documentation (Swagger/OpenAPI)](#api-documentation-swaggeropenapi)
 - [API - Endpoints](#api-endpoints)
 - [API - Request Parameters](#api-request-parameters)
@@ -47,6 +48,38 @@ git clone https://github.com/Aldhafara/LightPollutionService.git
 ```
 
 3. By default, the application will be available at:
+
+```
+http://localhost:8080
+```
+
+## How to Run with Docker
+
+1. Build the JAR:
+
+```bash
+./mvnw clean package
+```
+
+2. Build the image:
+
+```bash
+docker build -t lightpollutionservice .
+```
+
+3. Run:
+
+```bash
+docker run -p 8080:8080 lightpollutionservice
+```
+
+4. (or, with Docker Compose)
+
+```bash
+docker compose up --build
+```
+
+Once running, the application will be available at:
 
 ```
 http://localhost:8080
@@ -193,4 +226,4 @@ License: Creative Commons Attribution 4.0 (CC-BY 4.0)
 - [X] Global error handler
 - [ ] API documentation (Swagger/OpenAPI)
 - [ ] Integration tests (MockMvc)
-- [ ] Example deployment (Docker/Kubernetes)
+- [X] Example deployment (Docker/Kubernetes)
