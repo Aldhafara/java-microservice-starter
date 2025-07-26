@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 public class StatusService {
     private final Instant startTime = Instant.now();
 
-    public long getUptime() {
+    public long getUptimeMillis() {
         return Duration.between(startTime, Instant.now()).toMillis();
     }
 
